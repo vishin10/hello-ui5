@@ -1,0 +1,22 @@
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    controllerName="hello.ui5.controller.Main">
+
+    <App>
+        <pages>
+            <Page title="XML UI5 App">
+                <content>
+                    <Text text="Hello Vishnu from XML 🚀" />
+                    <Button text="Click Me" press=".onPress" />
+                    <Button text="View Folder" press=".onViewFolder" />
+                    <HBox alignItems="Center" renderType="Bare">
+                        <Input width="12rem" placeholder="Type your name" value="{/name}" />
+                        <Text text="{= ${/name} ? 'Hi ' + ${/name} : '' }" />
+                    </HBox>
+                </content>
+            </Page>
+        </pages>
+    </App>
+
+</mvc:View>

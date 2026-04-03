@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Hello UI5</title>
+
+    <script
+        id="sap-ui-bootstrap"
+        src="https://ui5.sap.com/resources/sap-ui-core.js"
+        data-sap-ui-theme="sap_horizon"
+        data-sap-ui-libs="sap.m"
+        data-sap-ui-compatVersion="edge"
+        data-sap-ui-async="true"
+        data-sap-ui-resourceroots='{"hello.ui5": "./"}'>
+    </script>
+
+    <script>
+        sap.ui.getCore().attachInit(function () {
+            sap.ui.require([
+                "sap/ui/core/mvc/XMLView"
+            ], function (XMLView) {
+                XMLView.create({
+                    viewName: "hello.ui5.view.Main"
+                }).then(function (oView) {
+                    oView.placeAt("content");
+                });
+            });
+        });
+    </script>
+</head>
+
+<body class="sapUiBody" id="content"></body>
+</html>
