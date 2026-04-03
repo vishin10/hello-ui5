@@ -5,15 +5,21 @@
 
     <App>
         <pages>
-            <Page title="XML UI5 App">
+            <Page title="XML UI5 App" class="appPage">
                 <content>
-                    <Text text="Hello Vishnu from XML 🚀" />
-                    <Button text="Click Me" press=".onPress" />
-                    <Button text="View Folder" press=".onViewFolder" />
-                    <HBox alignItems="Center" renderType="Bare">
-                        <Input width="12rem" placeholder="Type your name" value="{/name}" />
-                        <Text text="{= ${/name} ? 'Hi ' + ${/name} : '' }" />
-                    </HBox>
+                    <VBox width="100%" class="appShell">
+                        <VBox width="100%" class="appCard" alignItems="Stretch">
+                            <Text text="Hello Vishnu from XML 🚀" class="heroTitle" />
+                            <HBox alignItems="Center" renderType="Bare" class="ctaRow">
+                                <Button text="Click Me" press=".onPress" type="Emphasized" class="primaryBtn" />
+                                <Button text="View Folder" press=".onViewFolder" class="ghostBtn" />
+                            </HBox>
+                            <HBox alignItems="Center" renderType="Bare" class="inputRow">
+                                <Input width="16rem" placeholder="Type your name" value="{/name}" class="nameInput" />
+                                <Text text="{= ${/name} ? 'Hi ' + ${/name} : '' }" class="greetText" />
+                            </HBox>
+                        </VBox>
+                    </VBox>
                 </content>
             </Page>
         </pages>
