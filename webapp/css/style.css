@@ -99,6 +99,24 @@
   font-weight: 600;
 }
 
+.infoDialog .sapMDialogSection {
+  padding: 1.5rem 1.8rem 0.6rem;
+}
+
+.dialogBody {
+  gap: 0.8rem;
+}
+
+.dialogTitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--ink-900);
+}
+
+.dialogText {
+  color: var(--ink-600);
+}
+
 @media (max-width: 640px) {
   .appCard {
     padding: 1.5rem;

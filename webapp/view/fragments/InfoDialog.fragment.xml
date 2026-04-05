@@ -1,0 +1,14 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+    <Dialog id="infoDialog" title="Quick Info" class="infoDialog">
+        <content>
+            <VBox class="dialogBody" renderType="Bare">
+                <Text text="This dialog is loaded from a fragment." class="dialogTitle" />
+                <Text text="Fragments are lightweight and reuse the parent controller." class="dialogText" />
+                <MessageStrip text="Tip: Use fragments for reusable UI blocks." type="Information" showIcon="true" />
+            </VBox>
+        </content>
+        <endButton>
+            <Button text="Close" press=".onDialogClose" />
+        </endButton>
+    </Dialog>
+</core:FragmentDefinition>

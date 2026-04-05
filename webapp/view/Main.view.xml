@@ -11,11 +11,12 @@
                         <VBox width="100%" class="appCard" alignItems="Stretch">
                             <Text text="Hello Vishnu from XML 🚀" class="heroTitle" />
                             <HBox alignItems="Center" renderType="Bare" class="ctaRow">
-                                <Button text="Click Me" press=".onPress" type="Emphasized" class="primaryBtn" />
+                                <Button text="Click Me" icon="sap-icon://action" iconFirst="true" press=".onPress" type="Emphasized" class="primaryBtn" />
                                 <Button text="View Folder" press=".onViewFolder" class="ghostBtn" />
+                                <Button text="Open Dialog" press=".onOpenDialog" class="ghostBtn" />
                             </HBox>
                             <HBox alignItems="Center" renderType="Bare" class="inputRow">
-                                <Input width="16rem" placeholder="Type your name" value="{/name}" class="nameInput" />
+                                <Input width="16rem" placeholder="Type your name" value="{/name}" valueLiveUpdate="true" class="nameInput" />
                                 <Text text="{= ${/name} ? 'Hi ' + ${/name} : '' }" class="greetText" />
                             </HBox>
                         </VBox>
