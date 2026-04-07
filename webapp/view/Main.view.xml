@@ -19,6 +19,31 @@
                                 <Input width="16rem" placeholder="Type your name" value="{/name}" valueLiveUpdate="true" class="nameInput" />
                                 <Text text="{= ${/name} ? 'Hi ' + ${/name} : '' }" class="greetText" />
                             </HBox>
+                            <HBox alignItems="Start" renderType="Bare" class="formRow">
+                                <VBox class="formCol">
+                                    <Text text="Quick Form" class="sectionTitle" />
+                                    <VBox class="fieldGroup">
+                                        <Text text="Full Name" class="fieldLabel" />
+                                        <Input placeholder="John Doe" value="{/form/fullName}" valueLiveUpdate="true" />
+                                    </VBox>
+                                    <VBox class="fieldGroup">
+                                        <Text text="Email" class="fieldLabel" />
+                                        <Input placeholder="john@mail.com" type="Email" value="{/form/email}" valueLiveUpdate="true" />
+                                    </VBox>
+                                    <VBox class="fieldGroup">
+                                        <Text text="Phone" class="fieldLabel" />
+                                        <Input placeholder="+1 555 123 4567" type="Tel" value="{/form/phone}" valueLiveUpdate="true" />
+                                    </VBox>
+                                </VBox>
+                                <VBox class="previewCol">
+                                    <Text text="Live Preview" class="sectionTitle" />
+                                    <VBox class="previewCard">
+                                        <Text text="{= ${/form/fullName} ? ${/form/fullName} : 'Your name appears here' }" class="previewName" />
+                                        <Text text="{= ${/form/email} ? ${/form/email} : 'Email will appear here' }" class="previewMeta" />
+                                        <Text text="{= ${/form/phone} ? ${/form/phone} : 'Phone will appear here' }" class="previewMeta" />
+                                    </VBox>
+                                </VBox>
+                            </HBox>
                         </VBox>
                     </VBox>
                 </content>

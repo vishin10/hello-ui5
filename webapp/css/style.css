@@ -63,6 +63,54 @@
   align-items: center;
 }
 
+.formRow {
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.formCol,
+.previewCol {
+  flex: 1;
+  min-width: 0;
+}
+
+.sectionTitle {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--ink-900);
+  margin-bottom: 0.6rem;
+}
+
+.fieldGroup {
+  gap: 0.4rem;
+  margin-bottom: 0.8rem;
+}
+
+.fieldLabel {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-600);
+}
+
+.previewCard {
+  border: 1px dashed rgba(15, 118, 110, 0.3);
+  border-radius: 14px;
+  padding: 1rem 1.2rem;
+  background: #f4fffb;
+  gap: 0.4rem;
+}
+
+.previewName {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--brand-900);
+}
+
+.previewMeta {
+  color: var(--ink-600);
+}
+
 .primaryBtn .sapMBtnInner {
   background: linear-gradient(120deg, var(--brand-700), var(--brand-500));
   border: none;
@@ -123,7 +171,8 @@
   }
 
   .ctaRow,
-  .inputRow {
+  .inputRow,
+  .formRow {
     flex-direction: column;
     align-items: stretch;
   }

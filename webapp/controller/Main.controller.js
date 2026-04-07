@@ -10,7 +10,12 @@ sap.ui.define([
     return Controller.extend("hello.ui5.controller.Main", {
         onInit: function () {
             var oModel = new JSONModel({
-                name: ""
+                name: "",
+                form: {
+                    fullName: "",
+                    email: "",
+                    phone: ""
+                }
             });
             this.getView().setModel(oModel);
         },
