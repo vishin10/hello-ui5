@@ -1,0 +1,56 @@
+{
+  "people": [
+    {
+      "name": "Vishnu",
+      "currency": "USD",
+      "orders": [
+        { "item": "Paneer Tikka", "price": 10.5 },
+        { "item": "Masala Dosa", "price": 8.25 },
+        { "item": "Mango Lassi", "price": 4.5 }
+      ]
+    },
+    {
+      "name": "Aarav",
+      "currency": "USD",
+      "orders": [
+        { "item": "Veg Biryani", "price": 12.0 },
+        { "item": "Gulab Jamun", "price": 5.0 }
+      ]
+    },
+    {
+      "name": "Meera",
+      "currency": "USD",
+      "orders": [
+        { "item": "Chole Bhature", "price": 9.5 },
+        { "item": "Jeera Rice", "price": 6.75 },
+        { "item": "Dal Tadka", "price": 7.25 }
+      ]
+    },
+    {
+      "name": "Rohit",
+      "currency": "USD",
+      "orders": [
+        { "item": "Butter Chicken", "price": 13.5 },
+        { "item": "Garlic Naan", "price": 3.5 }
+      ]
+    },
+    {
+      "name": "Ananya",
+      "currency": "USD",
+      "orders": [
+        { "item": "Pasta Arrabbiata", "price": 11.0 },
+        { "item": "Caesar Salad", "price": 7.5 },
+        { "item": "Iced Tea", "price": 3.25 }
+      ]
+    },
+    {
+      "name": "Kabir",
+      "currency": "USD",
+      "orders": [
+        { "item": "Sushi Roll", "price": 14.0 },
+        { "item": "Miso Soup", "price": 4.0 },
+        { "item": "Green Tea", "price": 3.0 }
+      ]
+    }
+  ]
+}

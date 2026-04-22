@@ -86,6 +86,27 @@
   margin-bottom: 0.8rem;
 }
 
+.fieldGroup .sapMInputBaseContentWrapper,
+.peopleSearch .sapMInputBaseContentWrapper {
+  border-radius: 12px;
+  border: 1px solid rgba(15, 118, 110, 0.2);
+  background: #fcfffe;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.85);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.fieldGroup .sapMInputBaseInner,
+.peopleSearch .sapMInputBaseInner {
+  color: var(--ink-900);
+}
+
+.fieldGroup .sapMInputBaseContentWrapper:focus-within,
+.peopleSearch .sapMInputBaseContentWrapper:focus-within {
+  border-color: rgba(20, 184, 166, 0.55);
+  box-shadow: 0 0 0 4px rgba(20, 184, 166, 0.14);
+  transform: translateY(-1px);
+}
+
 .fieldLabel {
   font-size: 0.85rem;
   text-transform: uppercase;
@@ -99,6 +120,20 @@
   padding: 1rem 1.2rem;
   background: #f4fffb;
   gap: 0.4rem;
+  min-height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.previewCard::after {
+  content: "";
+  position: absolute;
+  inset: auto -2rem -2.5rem auto;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(20, 184, 166, 0.16) 0%, rgba(20, 184, 166, 0) 68%);
+  pointer-events: none;
 }
 
 .previewName {
@@ -109,6 +144,82 @@
 
 .previewMeta {
   color: var(--ink-600);
+}
+
+.listSection {
+  margin-top: 1.2rem;
+}
+
+.peopleSearch {
+  margin-bottom: 0.7rem;
+}
+
+.peopleSearch .sapMSFF {
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(15, 118, 110, 0.18);
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+}
+
+.peopleList .sapMListItems {
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(15, 118, 110, 0.2);
+}
+
+.peopleList .sapMLIB {
+  background: #ffffff;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.peopleList .sapMLIB:hover {
+  background: #f8fffd;
+}
+
+.peopleList .sapMLIBContent {
+  padding: 0;
+}
+
+.peopleList .sapMLIB + .sapMLIB {
+  border-top: 1px solid rgba(15, 118, 110, 0.12);
+}
+
+.orderItem {
+  gap: 0.25rem;
+  padding: 0.6rem 0.8rem;
+}
+
+.orderLines {
+  margin-top: 0.2rem;
+}
+
+.orderLines .sapMListItems {
+  border: none;
+}
+
+.orderLine {
+  width: 100%;
+  padding: 0.15rem 0;
+}
+
+.orderLine .sapMText:last-child {
+  font-weight: 600;
+  color: var(--brand-700);
+}
+
+.orderName {
+  font-weight: 600;
+  color: var(--ink-900);
+}
+
+.orderMeta {
+  color: var(--ink-600);
+}
+
+.orderTotal {
+  margin-top: 0.35rem;
+  font-weight: 600;
+  color: var(--brand-700);
 }
 
 .primaryBtn .sapMBtnInner {
@@ -141,14 +252,33 @@
   padding-left: 0.4rem;
 }
 
+.nameInput .sapMInputBaseContentWrapper:focus-within {
+  box-shadow: 0 0 0 4px rgba(20, 184, 166, 0.14);
+}
+
 .greetText {
   font-size: 1rem;
   color: var(--brand-700);
   font-weight: 600;
 }
 
+.orderTotal .sapMObjStatusText {
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
 .infoDialog .sapMDialogSection {
   padding: 1.5rem 1.8rem 0.6rem;
+}
+
+.infoDialog.sapMDialog {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.infoDialog .sapMDialogTitleGroup {
+  background: linear-gradient(135deg, rgba(20, 184, 166, 0.12), rgba(245, 158, 11, 0.14));
+  border-bottom: 1px solid rgba(15, 118, 110, 0.12);
 }
 
 .dialogBody {
@@ -163,6 +293,11 @@
 
 .dialogText {
   color: var(--ink-600);
+}
+
+.dialogBody .sapMMsgStrip {
+  border-radius: 12px;
+  border: 1px solid rgba(15, 118, 110, 0.16);
 }
 
 @media (max-width: 640px) {

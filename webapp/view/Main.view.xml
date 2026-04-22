@@ -44,6 +44,34 @@
                                     </VBox>
                                 </VBox>
                             </HBox>
+                            <VBox class="listSection">
+                                <Text text="Food Orders (Aggregation Binding)" class="sectionTitle" />
+                                <SearchField
+                                    placeholder="Search by name or item..."
+                                    liveChange=".onSearchPeople"
+                                    search=".onSearchPeople"
+                                    width="100%"
+                                    class="peopleSearch" />
+                                <List id="peopleList" items="{people>/people}" class="peopleList">
+                                    <CustomListItem>
+                                        <VBox class="orderItem">
+                                            <Text text="{people>name}" class="orderName" />
+                                            <List items="{people>orders}" showSeparators="None" class="orderLines">
+                                                <CustomListItem>
+                                                    <HBox class="orderLine" justifyContent="SpaceBetween" alignItems="Center">
+                                                        <Text text="{people>item}" />
+                                                        <Text text="{parts:[{path:'people>price'},{path:'people>currency'}], formatter: '.formatCurrency'}" />
+                                                    </HBox>
+                                                </CustomListItem>
+                                            </List>
+                                            <ObjectStatus
+                                                text="{parts:[{path:'people>orders'},{path:'people>currency'}], formatter: '.formatTotal'}"
+                                                state="{path:'people>orders', formatter: '.formatTotalState'}"
+                                                class="orderTotal" />
+                                        </VBox>
+                                    </CustomListItem>
+                                </List>
+                            </VBox>
                         </VBox>
                     </VBox>
                 </content>
